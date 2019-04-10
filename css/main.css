@@ -150,3 +150,174 @@ legend {
     margin: -1px;
     clip: rect(0, 0, 0, 0);
 }
+
+/* header */
+.header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background: hsla(0, 0%, 100%, 0.95);
+}
+
+.headerMenu {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header h1 {
+    display: inline-block;
+}
+
+.header h1 img {
+    width: 70px;
+}
+
+.logo {
+    float: left;
+    margin-top: 33px;
+}
+
+.headerMenuLanguage {
+    float: right;
+}
+
+.languageMenuLi > a {
+    display: block;
+    margin-top: 25px;
+    padding: 8px 0 10px 15px;
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #aaa;
+    background: hsla(0, 0%, 100%, 0.95);
+}
+
+.languageMenuLi > a::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #838383;
+    border-right: 1px solid #838383;
+    position: absolute;
+    top: 43px;
+    margin-left: 40px;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.languageMenuList {
+    display: inline-block;
+    height: 25px;
+}
+
+.languageMenuListA {
+    width: 100%;
+    padding-left: 15px;
+    display: block;
+    width: 120px;
+    height: 25px;
+}
+
+.languageMenuLiClicked {
+    margin-top: 25px;
+    padding-top: 10px;
+    width: 130px;
+    height: 170px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    background: hsla(0, 0%, 100%, 0.95);
+}
+
+.dropboxHide {
+    display: none !important;
+}
+
+.firstLanguageMenuList > a::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #838383;
+    border-right: 1px solid #838383;
+    position: absolute;
+    top: 47px;
+    margin-left: 38px;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.menu {
+    padding-left: 130px;
+    float: left;
+    background: skyblue;
+}
+
+.menu-item {
+    float: left;
+    /* position: relative; */
+    background: yellow;
+}
+
+.menu-item a {
+    cursor: pointer;
+    display: inline;
+}
+
+.menu-item a:hover {
+    color: #00c300;
+}
+
+.menu-item-text {
+    margin: 0 25px;
+    display: block;
+    line-height: 88px;
+    font-size: 1.1rem;
+    background: orange;
+}
+
+.sub-menu {
+    padding: 25px 0;
+    background: hsla(0, 0%, 94%, 0.95);
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100vw;
+    white-space: nowrap;
+    display: none;
+    line-height: 30px;
+}
+
+.menu-act .sub-menu {
+    display: block !important;
+}
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sub-menu-sub {
+    display: inline-block\ !important;
+    background: orange;
+}
+
+.sub-menu-sub-sub {
+    display: block !important;
+    color: #ccc;
+}
+
+li .sitemap {
+    margin-left: 300px;
+    color: #ccc;
+}
+
+li .sitemap:hover {
+    color: #ccc !important;
+}
+
+/* LINEMission */
+
+/* .LINEMission {
+    position: relative;
+    top: 90px;
+    width: 100vw;
+} */
