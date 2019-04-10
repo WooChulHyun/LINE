@@ -1,10 +1,21 @@
 var item = $(".menu-item");
 
+// item.on("mouseenter", function() {
+//     $(".sub-menu", this).slideDown("fast");
+// }).on("mouseleave", function() {
+//     $(".sub-menu", this).stop();
+//     $(".sub-menu", this).slideUp("fast");
+//     item.removeClass("menu-act");
+// });
+
 item.on("mouseenter focusin", function() {
-    $(".sub-menu", this).slideDown("slow");
+    $(".sub-menu", this).removeClass("hide");
+    $(this).addClass("menu-act");
+    $(".sub-menu", this).addClass("show");
 }).on("mouseleave focusout", function() {
-    $(".sub-menu", this).stop();
-    $(".sub-menu", this).slideUp("fast");
+    $(this).removeClass("menu-act");
+    $(".sub-menu", this).removeClass("show");
+    $(".sub-menu", this).addClass("hide");
 });
 
 $(document).ready(function() {
