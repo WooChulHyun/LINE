@@ -182,10 +182,11 @@ legend {
     float: right;
 }
 
-.languageMenuLi > a {
-    display: block;
+.languageMenuBtn {
+    display: inline-block;
     margin-top: 25px;
     padding: 8px 0 10px 15px;
+    text-align: left;
     width: 130px;
     height: 40px;
     border-radius: 50px;
@@ -193,7 +194,7 @@ legend {
     background: hsla(0, 0%, 100%, 0.95);
 }
 
-.languageMenuLi > a::after {
+.languageMenuBtn::after {
     content: "";
     width: 6px;
     height: 6px;
@@ -206,7 +207,7 @@ legend {
 }
 
 .languageMenuList {
-    display: inline-block;
+    display: block;
     height: 25px;
 }
 

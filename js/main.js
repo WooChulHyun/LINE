@@ -1,42 +1,36 @@
 var item = $(".menu-item");
 
 item.on("mouseenter focusin", function() {
-    item.removeClass("menu-act");
-    // $(this).addClass("menu-act");
-    $(".sub-menu", this).slideDown("fast");
-});
-
-item.on("mouseleave focusout", function() {
-    item.removeClass("menu-act");
-    // $(this).addClass("menu-act");
+    $(".sub-menu", this).slideDown("slow");
+}).on("mouseleave focusout", function() {
+    $(".sub-menu", this).stop();
     $(".sub-menu", this).slideUp("fast");
 });
 
-// $(".menu-item")
-//     .mouseenter(function() {
-//         item.removeClass("menu-act");
-//         // $(this).addClass("menu-act");
-//         $(".sub-menu", this).slideDown("fast");
-//     })
-//     .mouseleave(function() {
-//         item.removeClass("menu-act");
-//         // $(this).addClass("menu-act");
-//         $(".sub-menu", this).slideUp("fast");
-//     });
-
 $(document).ready(function() {
-    $(".headerMenuLanguage ul.languageMenuSub").hide();
-    $(".headerMenuLanguage ul.languageMenu li").click(function() {
-        $("ul", this).toggle();
-    });
-
-    $(".languageMenuLi").click(function() {
-        if ($("li.languageMenuLi>a").hasClass("dropboxHide")) {
-            $("li.languageMenuLi>a").removeClass("dropboxHide");
-            $("li.languageMenuLi").removeClass("languageMenuLiClicked");
+    $("ul.languageMenuSub").hide();
+    $("Button.languageMenuBtn").click(function(e) {
+        e.preventDefault();
+        $("ul.languageMenuSub").toggle();
+        if ($("Button.languageMenuBtn").hasClass("dropboxHide")) {
+            $("Button.languageMenuBtn").removeClass("dropboxHide");
+            $("ul.languageMenuSub").removeClass("languageMenuLiClicked");
         } else {
-            $("li.languageMenuLi>a").addClass("dropboxHide");
-            $("li.languageMenuLi").addClass("languageMenuLiClicked");
+            $("Button.languageMenuBtn").addClass("dropboxHide");
+            $("ul.languageMenuSub").addClass("languageMenuLiClicked");
+            document.getElementById("languageMenuListA").focus();
         }
     });
+    var timeout;
+    $("ul.languageMenuSub")
+        .on("focusin", function() {
+            clearTimeout(timeout);
+        })
+        .on("focusout", function(e) {
+            timeout = setTimeout(function() {
+                $("ul.languageMenuSub").hide();
+                $("Button.languageMenuBtn").removeClass("dropboxHide");
+                $("ul.languageMenuSub").removeClass("languageMenuLiClicked");
+            }, 100);
+        });
 });
