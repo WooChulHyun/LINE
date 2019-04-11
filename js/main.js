@@ -12,6 +12,19 @@ item.on("mouseenter focusin", function() {
     $(".sub-menu", this).removeClass("hide");
     $(this).addClass("menu-act");
     $(".sub-menu", this).addClass("show");
+    var pixelSub1 = $(this)
+        .find(".sub-menu li:first-child")
+        .offset().left;
+    var pixelSub2 =
+        $(this)
+            .find(".sub-menu > li:last-child")
+            .offset().left +
+        $(this)
+            .find(".sub-menu > li:last-child")
+            .width();
+    var pixelWidth = pixelSub2 - pixelSub1;
+    var pixel = $(this).offset().left + $(this).width() / 2;
+    $(".show").css("padding-left", pixel - pixelWidth / 2);
 }).on("mouseleave focusout", function() {
     $(this).removeClass("menu-act");
     $(".sub-menu", this).removeClass("show");
@@ -37,7 +50,7 @@ $(document).ready(function() {
         .on("focusin", function() {
             clearTimeout(timeout);
         })
-        .on("focusout", function(e) {
+        .on("focusout", function() {
             timeout = setTimeout(function() {
                 $("ul.languageMenuSub").hide();
                 $("Button.languageMenuBtn").removeClass("dropboxHide");

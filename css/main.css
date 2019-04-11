@@ -189,8 +189,9 @@ legend {
     text-align: left;
     width: 130px;
     height: 40px;
+    color: #838383;
     border-radius: 50px;
-    border: 1px solid #aaa;
+    border: 1px solid #adadad;
     background: hsla(0, 0%, 100%, 0.95);
 }
 
@@ -209,6 +210,7 @@ legend {
 .languageMenuList {
     display: block;
     height: 25px;
+    color: #838383;
 }
 
 .languageMenuListA {
@@ -225,7 +227,7 @@ legend {
     width: 130px;
     height: 170px;
     border-radius: 20px;
-    border: 1px solid #aaa;
+    border: 1px solid #adadad;
     background: hsla(0, 0%, 100%, 0.95);
 }
 
@@ -248,13 +250,11 @@ legend {
 .menu {
     padding-left: 130px;
     float: left;
-    background: skyblue;
 }
 
 .menu-item {
     float: left;
     /* position: relative; */
-    background: yellow;
 }
 
 .menu-item a {
@@ -271,7 +271,10 @@ legend {
     display: block;
     line-height: 88px;
     font-size: 1.1rem;
-    background: orange;
+}
+
+.menu-item > ul > li {
+    margin: 0 15px;
 }
 
 .sub-menu {
@@ -280,7 +283,7 @@ legend {
     position: absolute;
     top: 88px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     white-space: nowrap;
     /* display: none; */
     line-height: 30px;
@@ -299,12 +302,11 @@ legend {
 
 .sub-menu-sub {
     display: inline-block\ !important;
-    background: orange;
 }
 
 .sub-menu-sub-sub {
     display: block !important;
-    color: #ccc;
+    color: #838383;
 }
 
 .hide {
@@ -320,6 +322,7 @@ legend {
 
 .show {
     transition-duration: 0.3s;
+    transition-property: max-height;
     transition-timing-function: ease-in;
     max-height: 1000px;
     overflow: hidden;
@@ -327,11 +330,11 @@ legend {
 
 li .sitemap {
     margin-left: 300px;
-    color: #ccc;
+    color: #adadad;
 }
 
 li .sitemap:hover {
-    color: #ccc !important;
+    color: #adadad !important;
 }
 
 /* LINEMission */
