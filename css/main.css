@@ -381,3 +381,52 @@ li .sitemap:hover {
     position: absolute;
     top: -260px;
 }
+
+/* 뉴스 */
+.news {
+    position: relative;
+    margin-top: 60px;
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-header {
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.news-item {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-item li {
+    margin: 10px;
+    width: 530px;
+    height: 60px;
+}
+
+.news-item li p:first-of-type {
+    font-size: 1.125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item li p:last-of-type {
+    color: #00c300;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.news-more {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    color: #777;
+}
+
+/* 비즈니스 제휴 문의 */
